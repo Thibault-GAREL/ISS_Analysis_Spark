@@ -1,0 +1,63 @@
+services:
+  spark-master:
+    image: apache/spark-py:latest
+    container_name: iss-spark-master
+    hostname: spark-master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+    ports:
+      - "8080:8080"  # Spark Master Web UI
+      - "7077:7077"  # Spark Master Port
+      - "4040:4040"  # Spark Application UI
+    volumes:
+      - ./src:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./logs:/opt/spark-logs
+    networks:
+      - iss-network
+
+  spark-worker-1:
+    image: apache/spark-py:latest
+    container_name: iss-spark-worker-1
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_WORKER_DIR=/opt/spark-data/work
+    depends_on:
+      - spark-master
+    volumes:
+      - ./src:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./logs:/opt/spark-logs
+    networks:
+      - iss-network
+
+  spark-worker-2:
+    image: apache/spark-py:latest
+    container_name: iss-spark-worker-2
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_WORKER_DIR=/opt/spark-data/work
+    depends_on:
+      - spark-master
+    volumes:
+      - ./src:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./logs:/opt/spark-logs
+    networks:
+      - iss-network
+
+networks:
+  iss-network:
+    driver: bridge

@@ -1,0 +1,15 @@
+v1
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133530_588242.json","timestamp":1766320530589,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133546_938773.json","timestamp":1766320546938,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133555_320861.json","timestamp":1766320555321,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133600_665336.json","timestamp":1766320560666,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133605_993363.json","timestamp":1766320565993,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133611_326641.json","timestamp":1766320571327,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_133616_665470.json","timestamp":1766320576666,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135846_216144.json","timestamp":1766321926217,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135851_524354.json","timestamp":1766321931524,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135857_874322.json","timestamp":1766321937875,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135903_227977.json","timestamp":1766321943228,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135908_579709.json","timestamp":1766321948579,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135916_938976.json","timestamp":1766321956940,"batchId":0}
+{"path":"file:///opt/spark-data/raw/iss_data_20251221_135922_256197.json","timestamp":1766321962258,"batchId":0}

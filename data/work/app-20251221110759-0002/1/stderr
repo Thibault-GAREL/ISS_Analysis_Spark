@@ -1,0 +1,50 @@
+Spark Executor Command: "/opt/java/openjdk/bin/java" "-cp" "/opt/spark/conf:/opt/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=44647" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@spark-master:44647" "--executor-id" "1" "--hostname" "172.19.0.4" "--cores" "2" "--app-id" "app-20251221110759-0002" "--worker-url" "spark://Worker@172.19.0.4:38027" "--resourceProfileId" "0"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/12/21 11:08:00 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 336@141c17f33cb3
+25/12/21 11:08:00 INFO SignalUtils: Registering signal handler for TERM
+25/12/21 11:08:00 INFO SignalUtils: Registering signal handler for HUP
+25/12/21 11:08:00 INFO SignalUtils: Registering signal handler for INT
+25/12/21 11:08:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/21 11:08:01 INFO SecurityManager: Changing view acls to: 185
+25/12/21 11:08:01 INFO SecurityManager: Changing modify acls to: 185
+25/12/21 11:08:01 INFO SecurityManager: Changing view acls groups to: 
+25/12/21 11:08:01 INFO SecurityManager: Changing modify acls groups to: 
+25/12/21 11:08:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/21 11:08:02 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:44647 after 98 ms (0 ms spent in bootstraps)
+25/12/21 11:08:02 INFO SecurityManager: Changing view acls to: 185
+25/12/21 11:08:02 INFO SecurityManager: Changing modify acls to: 185
+25/12/21 11:08:02 INFO SecurityManager: Changing view acls groups to: 
+25/12/21 11:08:02 INFO SecurityManager: Changing modify acls groups to: 
+25/12/21 11:08:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/21 11:08:02 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:44647 after 4 ms (0 ms spent in bootstraps)
+25/12/21 11:08:02 INFO DiskBlockManager: Created local directory at /tmp/spark-ca083e45-75bf-4367-9b9f-e3768f08ae89/executor-a9484545-f48e-4a55-94d3-2f2c296bfe31/blockmgr-f3c9d0cf-f32c-4bcd-a197-1f2c546105e9
+25/12/21 11:08:02 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/12/21 11:08:02 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@spark-master:44647
+25/12/21 11:08:02 INFO WorkerWatcher: Connecting to worker spark://Worker@172.19.0.4:38027
+25/12/21 11:08:02 INFO TransportClientFactory: Successfully created connection to /172.19.0.4:38027 after 4 ms (0 ms spent in bootstraps)
+25/12/21 11:08:02 INFO WorkerWatcher: Successfully connected to spark://Worker@172.19.0.4:38027
+25/12/21 11:08:02 INFO ResourceUtils: ==============================================================
+25/12/21 11:08:02 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/12/21 11:08:02 INFO ResourceUtils: ==============================================================
+25/12/21 11:08:02 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+25/12/21 11:08:02 INFO Executor: Starting executor ID 1 on host 172.19.0.4
+25/12/21 11:08:02 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41505.
+25/12/21 11:08:02 INFO NettyBlockTransferService: Server created on 172.19.0.4:41505
+25/12/21 11:08:02 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/12/21 11:08:02 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 172.19.0.4, 41505, None)
+25/12/21 11:08:03 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, 172.19.0.4, 41505, None)
+25/12/21 11:08:03 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, 172.19.0.4, 41505, None)
+25/12/21 11:08:03 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/12/21 11:08:13 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+25/12/21 11:08:13 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/12/21 11:08:13 INFO TorrentBroadcast: Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 11:08:13 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:41733 after 4 ms (0 ms spent in bootstraps)
+25/12/21 11:08:13 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 73.0 KiB, free 434.3 MiB)
+25/12/21 11:08:14 INFO TorrentBroadcast: Reading broadcast variable 3 took 200 ms
+25/12/21 11:08:14 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 204.8 KiB, free 434.1 MiB)
+25/12/21 11:08:14 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2524 bytes result sent to driver
+25/12/21 11:08:15 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+25/12/21 11:08:15 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

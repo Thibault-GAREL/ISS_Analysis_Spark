@@ -1,0 +1,82 @@
+Spark Executor Command: "/opt/java/openjdk/bin/java" "-cp" "/opt/spark/conf:/opt/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=45885" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@spark-master:45885" "--executor-id" "1" "--hostname" "172.19.0.3" "--cores" "2" "--app-id" "app-20251221125917-0000" "--worker-url" "spark://Worker@172.19.0.3:43327" "--resourceProfileId" "0"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/12/21 12:59:20 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 118@e310930d6a1d
+25/12/21 12:59:20 INFO SignalUtils: Registering signal handler for TERM
+25/12/21 12:59:20 INFO SignalUtils: Registering signal handler for HUP
+25/12/21 12:59:20 INFO SignalUtils: Registering signal handler for INT
+25/12/21 12:59:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/21 12:59:20 INFO SecurityManager: Changing view acls to: 185
+25/12/21 12:59:20 INFO SecurityManager: Changing modify acls to: 185
+25/12/21 12:59:20 INFO SecurityManager: Changing view acls groups to: 
+25/12/21 12:59:20 INFO SecurityManager: Changing modify acls groups to: 
+25/12/21 12:59:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/21 12:59:21 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:45885 after 80 ms (0 ms spent in bootstraps)
+25/12/21 12:59:21 INFO SecurityManager: Changing view acls to: 185
+25/12/21 12:59:21 INFO SecurityManager: Changing modify acls to: 185
+25/12/21 12:59:21 INFO SecurityManager: Changing view acls groups to: 
+25/12/21 12:59:21 INFO SecurityManager: Changing modify acls groups to: 
+25/12/21 12:59:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/21 12:59:21 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:45885 after 4 ms (0 ms spent in bootstraps)
+25/12/21 12:59:21 INFO DiskBlockManager: Created local directory at /tmp/spark-13090146-2afa-43d5-acad-2a18554f6064/executor-8f707a53-09ea-4010-bd05-af4b8936ddcf/blockmgr-7fac84fb-956a-467b-afc1-e25272baed1d
+25/12/21 12:59:21 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/12/21 12:59:22 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@spark-master:45885
+25/12/21 12:59:22 INFO WorkerWatcher: Connecting to worker spark://Worker@172.19.0.3:43327
+25/12/21 12:59:22 INFO TransportClientFactory: Successfully created connection to /172.19.0.3:43327 after 4 ms (0 ms spent in bootstraps)
+25/12/21 12:59:22 INFO WorkerWatcher: Successfully connected to spark://Worker@172.19.0.3:43327
+25/12/21 12:59:22 INFO ResourceUtils: ==============================================================
+25/12/21 12:59:22 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/12/21 12:59:22 INFO ResourceUtils: ==============================================================
+25/12/21 12:59:22 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+25/12/21 12:59:22 INFO Executor: Starting executor ID 1 on host 172.19.0.3
+25/12/21 12:59:22 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33741.
+25/12/21 12:59:22 INFO NettyBlockTransferService: Server created on 172.19.0.3:33741
+25/12/21 12:59:22 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/12/21 12:59:22 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 172.19.0.3, 33741, None)
+25/12/21 12:59:22 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, 172.19.0.3, 33741, None)
+25/12/21 12:59:22 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, 172.19.0.3, 33741, None)
+25/12/21 12:59:22 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/12/21 12:59:28 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+25/12/21 12:59:28 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+25/12/21 12:59:28 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+25/12/21 12:59:28 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/12/21 12:59:28 INFO TorrentBroadcast: Started reading broadcast variable 1 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:59:28 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:36179 after 4 ms (0 ms spent in bootstraps)
+25/12/21 12:59:28 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 8.1 KiB, free 434.4 MiB)
+25/12/21 12:59:28 INFO TorrentBroadcast: Reading broadcast variable 1 took 262 ms
+25/12/21 12:59:28 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 17.7 KiB, free 434.4 MiB)
+25/12/21 12:59:29 INFO CodeGenerator: Code generated in 409.186496 ms
+25/12/21 12:59:29 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_135851_524354.json, range: 0-221, partition values: [empty row]
+25/12/21 12:59:29 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133605_993363.json, range: 0-160, partition values: [empty row]
+25/12/21 12:59:30 INFO CodeGenerator: Code generated in 64.199337 ms
+25/12/21 12:59:30 INFO TorrentBroadcast: Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:59:30 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.3 KiB, free 434.3 MiB)
+25/12/21 12:59:30 INFO TorrentBroadcast: Reading broadcast variable 0 took 36 ms
+25/12/21 12:59:30 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 370.9 KiB, free 434.0 MiB)
+25/12/21 12:59:30 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_135857_874322.json, range: 0-221, partition values: [empty row]
+25/12/21 12:59:30 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133611_326641.json, range: 0-160, partition values: [empty row]
+25/12/21 12:59:30 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_135903_227977.json, range: 0-221, partition values: [empty row]
+25/12/21 12:59:30 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133616_665470.json, range: 0-159, partition values: [empty row]
+25/12/21 12:59:30 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_135908_579709.json, range: 0-221, partition values: [empty row]
+25/12/21 12:59:30 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133546_938773.json, range: 0-158, partition values: [empty row]
+25/12/21 12:59:30 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 0, attempt 0, stage 0.0)
+25/12/21 12:59:30 INFO DataWritingSparkTask: Commit authorized for partition 2 (task 2, attempt 0, stage 0.0)
+25/12/21 12:59:30 INFO DataWritingSparkTask: Committed partition 2 (task 2, attempt 0, stage 0.0)
+25/12/21 12:59:30 INFO DataWritingSparkTask: Committed partition 0 (task 0, attempt 0, stage 0.0)
+25/12/21 12:59:30 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2257 bytes result sent to driver
+25/12/21 12:59:30 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2321 bytes result sent to driver
+25/12/21 12:59:32 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+25/12/21 12:59:32 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+25/12/21 12:59:32 INFO TorrentBroadcast: Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:59:32 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.1 KiB, free 434.4 MiB)
+25/12/21 12:59:32 INFO TorrentBroadcast: Reading broadcast variable 3 took 19 ms
+25/12/21 12:59:32 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 17.7 KiB, free 434.4 MiB)
+25/12/21 12:59:32 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_135928_583236.json, range: 0-221, partition values: [empty row]
+25/12/21 12:59:32 INFO TorrentBroadcast: Started reading broadcast variable 2 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:59:32 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.3 KiB, free 434.3 MiB)
+25/12/21 12:59:32 INFO TorrentBroadcast: Reading broadcast variable 2 took 19 ms
+25/12/21 12:59:32 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 370.9 KiB, free 434.0 MiB)
+25/12/21 12:59:32 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 4, attempt 0, stage 1.0)
+25/12/21 12:59:32 INFO DataWritingSparkTask: Committed partition 0 (task 4, attempt 0, stage 1.0)
+25/12/21 12:59:32 INFO Executor: Finished task 0.0 in stage 1.0 (TID 4). 1915 bytes result sent to driver

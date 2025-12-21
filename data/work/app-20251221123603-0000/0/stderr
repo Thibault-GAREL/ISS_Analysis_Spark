@@ -1,0 +1,294 @@
+Spark Executor Command: "/opt/java/openjdk/bin/java" "-cp" "/opt/spark/conf:/opt/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=38325" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@spark-master:38325" "--executor-id" "0" "--hostname" "172.19.0.3" "--cores" "2" "--app-id" "app-20251221123603-0000" "--worker-url" "spark://Worker@172.19.0.3:40171" "--resourceProfileId" "0"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/12/21 12:36:05 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 118@8c0c475ca190
+25/12/21 12:36:05 INFO SignalUtils: Registering signal handler for TERM
+25/12/21 12:36:05 INFO SignalUtils: Registering signal handler for HUP
+25/12/21 12:36:05 INFO SignalUtils: Registering signal handler for INT
+25/12/21 12:36:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/21 12:36:06 INFO SecurityManager: Changing view acls to: 185
+25/12/21 12:36:06 INFO SecurityManager: Changing modify acls to: 185
+25/12/21 12:36:06 INFO SecurityManager: Changing view acls groups to: 
+25/12/21 12:36:06 INFO SecurityManager: Changing modify acls groups to: 
+25/12/21 12:36:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/21 12:36:06 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:38325 after 85 ms (0 ms spent in bootstraps)
+25/12/21 12:36:07 INFO SecurityManager: Changing view acls to: 185
+25/12/21 12:36:07 INFO SecurityManager: Changing modify acls to: 185
+25/12/21 12:36:07 INFO SecurityManager: Changing view acls groups to: 
+25/12/21 12:36:07 INFO SecurityManager: Changing modify acls groups to: 
+25/12/21 12:36:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/21 12:36:07 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:38325 after 2 ms (0 ms spent in bootstraps)
+25/12/21 12:36:07 INFO DiskBlockManager: Created local directory at /tmp/spark-cc00d8ef-0286-4280-9f8a-1fcc8ad3eb84/executor-f1f703d1-d813-44f2-bd82-d6db7d4c9fe4/blockmgr-4c24aff5-d9cc-4045-aa88-7245bee25ea0
+25/12/21 12:36:07 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/12/21 12:36:07 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@spark-master:38325
+25/12/21 12:36:07 INFO WorkerWatcher: Connecting to worker spark://Worker@172.19.0.3:40171
+25/12/21 12:36:07 INFO TransportClientFactory: Successfully created connection to /172.19.0.3:40171 after 4 ms (0 ms spent in bootstraps)
+25/12/21 12:36:07 INFO WorkerWatcher: Successfully connected to spark://Worker@172.19.0.3:40171
+25/12/21 12:36:07 INFO ResourceUtils: ==============================================================
+25/12/21 12:36:07 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/12/21 12:36:07 INFO ResourceUtils: ==============================================================
+25/12/21 12:36:07 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+25/12/21 12:36:07 INFO Executor: Starting executor ID 0 on host 172.19.0.3
+25/12/21 12:36:07 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38927.
+25/12/21 12:36:07 INFO NettyBlockTransferService: Server created on 172.19.0.3:38927
+25/12/21 12:36:07 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/12/21 12:36:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 172.19.0.3, 38927, None)
+25/12/21 12:36:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 172.19.0.3, 38927, None)
+25/12/21 12:36:07 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 172.19.0.3, 38927, None)
+25/12/21 12:36:07 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/12/21 12:36:14 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+25/12/21 12:36:14 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+25/12/21 12:36:14 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+25/12/21 12:36:14 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/12/21 12:36:15 INFO TorrentBroadcast: Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:15 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:43477 after 4 ms (0 ms spent in bootstraps)
+25/12/21 12:36:15 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 434.4 MiB)
+25/12/21 12:36:15 INFO TorrentBroadcast: Reading broadcast variable 3 took 316 ms
+25/12/21 12:36:15 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 16.8 KiB, free 434.4 MiB)
+25/12/21 12:36:16 INFO CodeGenerator: Code generated in 293.922458 ms
+25/12/21 12:36:16 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133555_320861.json, range: 0-158, partition values: [empty row]
+25/12/21 12:36:16 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133600_665336.json, range: 0-160, partition values: [empty row]
+25/12/21 12:36:16 INFO CodeGenerator: Code generated in 30.23362 ms
+25/12/21 12:36:16 INFO TorrentBroadcast: Started reading broadcast variable 1 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 34.3 KiB, free 434.3 MiB)
+25/12/21 12:36:16 INFO TorrentBroadcast: Reading broadcast variable 1 took 23 ms
+25/12/21 12:36:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 370.9 KiB, free 434.0 MiB)
+25/12/21 12:36:16 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133530_588242.json, range: 0-157, partition values: [empty row]
+25/12/21 12:36:16 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133605_993363.json, range: 0-160, partition values: [empty row]
+25/12/21 12:36:16 INFO DataWritingSparkTask: Commit authorized for partition 2 (task 2, attempt 0, stage 0.0)
+25/12/21 12:36:16 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 0, attempt 0, stage 0.0)
+25/12/21 12:36:16 INFO DataWritingSparkTask: Committed partition 0 (task 0, attempt 0, stage 0.0)
+25/12/21 12:36:16 INFO DataWritingSparkTask: Committed partition 2 (task 2, attempt 0, stage 0.0)
+25/12/21 12:36:17 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2015 bytes result sent to driver
+25/12/21 12:36:17 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2015 bytes result sent to driver
+25/12/21 12:36:17 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+25/12/21 12:36:17 INFO Executor: Running task 0.0 in stage 2.0 (TID 6)
+25/12/21 12:36:17 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+25/12/21 12:36:17 INFO Executor: Running task 1.0 in stage 2.0 (TID 7)
+25/12/21 12:36:17 INFO TorrentBroadcast: Started reading broadcast variable 7 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:17 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 29.8 KiB, free 434.0 MiB)
+25/12/21 12:36:17 INFO TorrentBroadcast: Reading broadcast variable 7 took 23 ms
+25/12/21 12:36:17 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 75.3 KiB, free 433.9 MiB)
+25/12/21 12:36:17 INFO CodeGenerator: Code generated in 43.057683 ms
+25/12/21 12:36:17 INFO CodeGenerator: Code generated in 23.235435 ms
+25/12/21 12:36:17 INFO CodeGenerator: Code generated in 202.234371 ms
+25/12/21 12:36:17 INFO CodeGenerator: Code generated in 26.226702 ms
+25/12/21 12:36:17 INFO CodeGenerator: Code generated in 23.842243 ms
+25/12/21 12:36:17 INFO CodeGenerator: Code generated in 24.558344 ms
+25/12/21 12:36:18 INFO CodeGenerator: Code generated in 42.072264 ms
+25/12/21 12:36:18 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133611_326641.json, range: 0-160, partition values: [empty row]
+25/12/21 12:36:18 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133600_665336.json, range: 0-160, partition values: [empty row]
+25/12/21 12:36:18 INFO TorrentBroadcast: Started reading broadcast variable 2 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.3 KiB, free 433.3 MiB)
+25/12/21 12:36:18 INFO TorrentBroadcast: Reading broadcast variable 2 took 26 ms
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 370.9 KiB, free 433.0 MiB)
+25/12/21 12:36:18 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133605_993363.json, range: 0-160, partition values: [empty row]
+25/12/21 12:36:18 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133546_938773.json, range: 0-158, partition values: [empty row]
+25/12/21 12:36:18 INFO Executor: Finished task 1.0 in stage 2.0 (TID 7). 3019 bytes result sent to driver
+25/12/21 12:36:18 INFO Executor: Finished task 0.0 in stage 2.0 (TID 6). 3019 bytes result sent to driver
+25/12/21 12:36:18 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+25/12/21 12:36:18 INFO Executor: Running task 0.0 in stage 3.0 (TID 9)
+25/12/21 12:36:18 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+25/12/21 12:36:18 INFO Executor: Running task 1.0 in stage 3.0 (TID 10)
+25/12/21 12:36:18 INFO MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+25/12/21 12:36:18 INFO TorrentBroadcast: Started reading broadcast variable 8 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 119.6 KiB, free 433.4 MiB)
+25/12/21 12:36:18 INFO TorrentBroadcast: Reading broadcast variable 8 took 17 ms
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 334.8 KiB, free 433.0 MiB)
+25/12/21 12:36:18 INFO TorrentBroadcast: Started reading broadcast variable 6 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 433.0 MiB)
+25/12/21 12:36:18 INFO TorrentBroadcast: Reading broadcast variable 6 took 18 ms
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 370.9 KiB, free 432.6 MiB)
+25/12/21 12:36:18 INFO StateStore: State Store maintenance task started
+25/12/21 12:36:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:18 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,1,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:18 INFO HDFSBackedStateStoreProvider: Retrieved version 0 of HDFSStateStoreProvider[id = (op=0,part=1),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] for update
+25/12/21 12:36:18 INFO TorrentBroadcast: Started reading broadcast variable 5 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 432.6 MiB)
+25/12/21 12:36:18 INFO TorrentBroadcast: Reading broadcast variable 5 took 20 ms
+25/12/21 12:36:18 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 370.9 KiB, free 432.2 MiB)
+25/12/21 12:36:19 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/_metadata/schema using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/_metadata/.schema.104ff6df-f2dd-4182-8bae-38c1275249b2.TID9.tmp
+25/12/21 12:36:19 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/_metadata/.schema.104ff6df-f2dd-4182-8bae-38c1275249b2.TID9.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/_metadata/schema
+25/12/21 12:36:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:19 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:19 INFO HDFSBackedStateStoreProvider: Retrieved version 0 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for update
+25/12/21 12:36:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:19 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,1,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:19 INFO HDFSBackedStateStoreProvider: Retrieved version 0 of HDFSStateStoreProvider[id = (op=0,part=1),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] for readonly
+25/12/21 12:36:19 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+25/12/21 12:36:19 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:19 INFO HDFSBackedStateStoreProvider: Retrieved version 0 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for readonly
+25/12/21 12:36:19 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+25/12/21 12:36:19 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@spark-master:38325)
+25/12/21 12:36:19 INFO MapOutputTrackerWorker: Got the map output locations
+25/12/21 12:36:19 INFO ShuffleBlockFetcherIterator: Getting 2 (271.0 B) non-empty blocks including 1 (129.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 1 (142.0 B) remote blocks
+25/12/21 12:36:19 INFO ShuffleBlockFetcherIterator: Getting 2 (285.0 B) non-empty blocks including 2 (285.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/12/21 12:36:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 21 ms
+25/12/21 12:36:19 INFO TransportClientFactory: Successfully created connection to /172.19.0.4:33863 after 2 ms (0 ms spent in bootstraps)
+25/12/21 12:36:19 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 34 ms
+25/12/21 12:36:19 INFO CodeGenerator: Code generated in 82.616243 ms
+25/12/21 12:36:19 INFO CodeGenerator: Code generated in 56.038648 ms
+25/12/21 12:36:19 INFO CodeGenerator: Code generated in 8.418024 ms
+25/12/21 12:36:19 INFO CodeGenerator: Code generated in 8.961749 ms
+25/12/21 12:36:19 INFO CodeGenerator: Code generated in 24.259871 ms
+25/12/21 12:36:19 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/1.delta using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/.1.delta.0505cf79-91d1-480c-8e9c-fb46084be833.TID9.tmp
+25/12/21 12:36:19 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/1.delta using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/.1.delta.74274e0b-2fc1-43cc-8bd0-e842ef1784df.TID10.tmp
+25/12/21 12:36:20 INFO CodeGenerator: Code generated in 89.948181 ms
+25/12/21 12:36:20 INFO CodeGenerator: Code generated in 13.959038 ms
+25/12/21 12:36:20 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/.1.delta.74274e0b-2fc1-43cc-8bd0-e842ef1784df.TID10.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/1.delta
+25/12/21 12:36:20 INFO HDFSBackedStateStoreProvider: Committed version 1 for HDFSStateStore[id=(op=0,part=1),dir=file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] to file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/1.delta
+25/12/21 12:36:20 INFO Executor: Finished task 1.0 in stage 3.0 (TID 10). 8722 bytes result sent to driver
+25/12/21 12:36:20 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/.1.delta.0505cf79-91d1-480c-8e9c-fb46084be833.TID9.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/1.delta
+25/12/21 12:36:20 INFO HDFSBackedStateStoreProvider: Committed version 1 for HDFSStateStore[id=(op=0,part=0),dir=file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] to file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/1.delta
+25/12/21 12:36:20 INFO Executor: Finished task 0.0 in stage 3.0 (TID 9). 9055 bytes result sent to driver
+25/12/21 12:36:22 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+25/12/21 12:36:22 INFO Executor: Running task 0.0 in stage 6.0 (TID 13)
+25/12/21 12:36:22 INFO TorrentBroadcast: Started reading broadcast variable 16 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 29.8 KiB, free 432.8 MiB)
+25/12/21 12:36:22 INFO TorrentBroadcast: Reading broadcast variable 16 took 14 ms
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 75.3 KiB, free 432.7 MiB)
+25/12/21 12:36:22 INFO FileScanRDD: Reading File path: file:///opt/spark-data/raw/iss_data_20251221_133616_665470.json, range: 0-159, partition values: [empty row]
+25/12/21 12:36:22 INFO TorrentBroadcast: Started reading broadcast variable 13 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 34.3 KiB, free 432.4 MiB)
+25/12/21 12:36:22 INFO TorrentBroadcast: Reading broadcast variable 13 took 14 ms
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 370.9 KiB, free 432.0 MiB)
+25/12/21 12:36:22 INFO Executor: Finished task 0.0 in stage 6.0 (TID 13). 2933 bytes result sent to driver
+25/12/21 12:36:22 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+25/12/21 12:36:22 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+25/12/21 12:36:22 INFO Executor: Running task 0.0 in stage 7.0 (TID 14)
+25/12/21 12:36:22 INFO Executor: Running task 1.0 in stage 7.0 (TID 15)
+25/12/21 12:36:22 INFO MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+25/12/21 12:36:22 INFO TorrentBroadcast: Started reading broadcast variable 17 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 119.5 KiB, free 432.2 MiB)
+25/12/21 12:36:22 INFO TorrentBroadcast: Reading broadcast variable 17 took 13 ms
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 334.7 KiB, free 431.9 MiB)
+25/12/21 12:36:22 INFO TorrentBroadcast: Started reading broadcast variable 15 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 431.8 MiB)
+25/12/21 12:36:22 INFO TorrentBroadcast: Reading broadcast variable 15 took 12 ms
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 370.9 KiB, free 431.5 MiB)
+25/12/21 12:36:22 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:22 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,1,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:22 INFO HDFSBackedStateStoreProvider: Retrieved version 1 of HDFSStateStoreProvider[id = (op=0,part=1),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] for update
+25/12/21 12:36:22 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:22 INFO TorrentBroadcast: Started reading broadcast variable 14 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:22 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:22 INFO HDFSBackedStateStoreProvider: Retrieved version 1 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for update
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 431.4 MiB)
+25/12/21 12:36:22 INFO TorrentBroadcast: Reading broadcast variable 14 took 17 ms
+25/12/21 12:36:22 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 370.9 KiB, free 431.1 MiB)
+25/12/21 12:36:22 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:22 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,1,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:22 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:22 INFO HDFSBackedStateStoreProvider: Retrieved version 1 of HDFSStateStoreProvider[id = (op=0,part=1),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] for readonly
+25/12/21 12:36:22 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+25/12/21 12:36:22 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@spark-master:38325)
+25/12/21 12:36:22 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:22 INFO HDFSBackedStateStoreProvider: Retrieved version 1 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for readonly
+25/12/21 12:36:22 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+25/12/21 12:36:22 INFO MapOutputTrackerWorker: Got the map output locations
+25/12/21 12:36:22 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/12/21 12:36:22 INFO ShuffleBlockFetcherIterator: Getting 1 (129.0 B) non-empty blocks including 1 (129.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/12/21 12:36:22 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/12/21 12:36:22 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/12/21 12:36:22 INFO CodeGenerator: Code generated in 7.5375 ms
+25/12/21 12:36:22 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/2.delta using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/.2.delta.991e49c8-a273-440a-bea8-aebf2e42b019.TID15.tmp
+25/12/21 12:36:22 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/2.delta using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/.2.delta.e30355bc-4bd3-4cfe-86a0-371876481e2e.TID14.tmp
+25/12/21 12:36:22 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/.2.delta.991e49c8-a273-440a-bea8-aebf2e42b019.TID15.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/2.delta
+25/12/21 12:36:22 INFO HDFSBackedStateStoreProvider: Committed version 2 for HDFSStateStore[id=(op=0,part=1),dir=file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] to file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/2.delta
+25/12/21 12:36:22 INFO Executor: Finished task 1.0 in stage 7.0 (TID 15). 8722 bytes result sent to driver
+25/12/21 12:36:22 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/.2.delta.e30355bc-4bd3-4cfe-86a0-371876481e2e.TID14.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/2.delta
+25/12/21 12:36:22 INFO HDFSBackedStateStoreProvider: Committed version 2 for HDFSStateStore[id=(op=0,part=0),dir=file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] to file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/2.delta
+25/12/21 12:36:22 INFO Executor: Finished task 0.0 in stage 7.0 (TID 14). 9098 bytes result sent to driver
+25/12/21 12:36:24 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+25/12/21 12:36:24 INFO Executor: Running task 0.0 in stage 9.0 (TID 16)
+25/12/21 12:36:24 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+25/12/21 12:36:24 INFO Executor: Running task 1.0 in stage 9.0 (TID 17)
+25/12/21 12:36:24 INFO TorrentBroadcast: Started reading broadcast variable 20 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:24 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 116.5 KiB, free 432.2 MiB)
+25/12/21 12:36:24 INFO TorrentBroadcast: Reading broadcast variable 20 took 27 ms
+25/12/21 12:36:24 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 330.0 KiB, free 432.3 MiB)
+25/12/21 12:36:24 INFO TorrentBroadcast: Started reading broadcast variable 19 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:24 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 432.3 MiB)
+25/12/21 12:36:24 INFO TorrentBroadcast: Reading broadcast variable 19 took 17 ms
+25/12/21 12:36:24 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 370.9 KiB, free 432.0 MiB)
+25/12/21 12:36:24 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:24 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:24 INFO HDFSBackedStateStoreProvider: Retrieved version 2 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for update
+25/12/21 12:36:24 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:24 INFO TorrentBroadcast: Started reading broadcast variable 18 with 1 pieces (estimated total size 4.0 MiB)
+25/12/21 12:36:24 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,1,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:24 INFO HDFSBackedStateStoreProvider: Retrieved version 2 of HDFSStateStoreProvider[id = (op=0,part=1),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] for update
+25/12/21 12:36:24 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 431.9 MiB)
+25/12/21 12:36:24 INFO TorrentBroadcast: Reading broadcast variable 18 took 21 ms
+25/12/21 12:36:24 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 370.9 KiB, free 431.6 MiB)
+25/12/21 12:36:24 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:24 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:24 INFO HDFSBackedStateStoreProvider: Retrieved version 2 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for readonly
+25/12/21 12:36:24 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:36:24 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+25/12/21 12:36:24 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@spark-master:38325)
+25/12/21 12:36:24 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,1,default),3a57592f-84dd-496a-984d-47ff2f6063cb) is active
+25/12/21 12:36:24 INFO HDFSBackedStateStoreProvider: Retrieved version 2 of HDFSStateStoreProvider[id = (op=0,part=1),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] for readonly
+25/12/21 12:36:24 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+25/12/21 12:36:24 INFO MapOutputTrackerWorker: Got the map output locations
+25/12/21 12:36:24 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/12/21 12:36:24 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/12/21 12:36:24 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/12/21 12:36:24 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/12/21 12:36:24 INFO CodeGenerator: Code generated in 68.2243 ms
+25/12/21 12:36:24 INFO CodeGenerator: Code generated in 105.263693 ms
+25/12/21 12:36:24 INFO CodeGenerator: Code generated in 14.795882 ms
+25/12/21 12:36:24 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/3.delta using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/.3.delta.3163ace3-d62d-43d2-899a-bb29adfb3508.TID17.tmp
+25/12/21 12:36:24 INFO CheckpointFileManager: Writing atomically to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/3.delta using temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/.3.delta.97b4d7d6-abb5-4702-bd96-86e86d2dd391.TID16.tmp
+25/12/21 12:36:24 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/.3.delta.3163ace3-d62d-43d2-899a-bb29adfb3508.TID17.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/3.delta
+25/12/21 12:36:24 INFO HDFSBackedStateStoreProvider: Committed version 3 for HDFSStateStore[id=(op=0,part=1),dir=file:/opt/spark-data/checkpoints/iss_statistics/state/0/1] to file file:/opt/spark-data/checkpoints/iss_statistics/state/0/1/3.delta
+25/12/21 12:36:24 INFO Executor: Finished task 1.0 in stage 9.0 (TID 17). 8349 bytes result sent to driver
+25/12/21 12:36:25 INFO CheckpointFileManager: Renamed temp file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/.3.delta.97b4d7d6-abb5-4702-bd96-86e86d2dd391.TID16.tmp to file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/3.delta
+25/12/21 12:36:25 INFO HDFSBackedStateStoreProvider: Committed version 3 for HDFSStateStore[id=(op=0,part=0),dir=file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] to file file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/3.delta
+25/12/21 12:36:25 INFO Executor: Finished task 0.0 in stage 9.0 (TID 16). 8725 bytes result sent to driver
+25/12/21 12:37:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:37:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:38:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:38:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:39:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:39:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:40:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:40:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:41:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:41:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:42:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:42:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:43:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:43:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:44:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:44:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:45:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:45:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:46:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:46:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:47:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:47:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:48:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:48:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:49:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:49:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:50:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:50:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:51:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:51:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:52:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:52:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:53:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:53:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:54:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:54:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:55:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:55:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:56:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:56:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:57:18 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:57:19 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023
+25/12/21 12:57:30 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+ator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@1aa1d023

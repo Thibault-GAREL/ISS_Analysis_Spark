@@ -1,0 +1,89 @@
+Spark Executor Command: "/opt/java/openjdk/bin/java" "-cp" "/opt/spark/conf:/opt/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=36865" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@spark-master:36865" "--executor-id" "1" "--hostname" "172.19.0.4" "--cores" "2" "--app-id" "app-20251212185027-0000" "--worker-url" "spark://Worker@172.19.0.4:39893" "--resourceProfileId" "0"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+25/12/12 18:50:29 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 116@141c17f33cb3
+25/12/12 18:50:29 INFO SignalUtils: Registering signal handler for TERM
+25/12/12 18:50:29 INFO SignalUtils: Registering signal handler for HUP
+25/12/12 18:50:29 INFO SignalUtils: Registering signal handler for INT
+25/12/12 18:50:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/12 18:50:30 INFO SecurityManager: Changing view acls to: 185
+25/12/12 18:50:30 INFO SecurityManager: Changing modify acls to: 185
+25/12/12 18:50:30 INFO SecurityManager: Changing view acls groups to: 
+25/12/12 18:50:30 INFO SecurityManager: Changing modify acls groups to: 
+25/12/12 18:50:30 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/12 18:50:30 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:36865 after 91 ms (0 ms spent in bootstraps)
+25/12/12 18:50:31 INFO SecurityManager: Changing view acls to: 185
+25/12/12 18:50:31 INFO SecurityManager: Changing modify acls to: 185
+25/12/12 18:50:31 INFO SecurityManager: Changing view acls groups to: 
+25/12/12 18:50:31 INFO SecurityManager: Changing modify acls groups to: 
+25/12/12 18:50:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: 185; groups with view permissions: EMPTY; users with modify permissions: 185; groups with modify permissions: EMPTY
+25/12/12 18:50:31 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:36865 after 3 ms (0 ms spent in bootstraps)
+25/12/12 18:50:31 INFO DiskBlockManager: Created local directory at /tmp/spark-bf5807ba-21fa-461a-a4b1-109310bab41f/executor-4106e371-93dc-49d7-a940-0302638ee7ef/blockmgr-82a2884a-7fcf-49c9-856a-04a2c97af963
+25/12/12 18:50:31 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/12/12 18:50:31 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@spark-master:36865
+25/12/12 18:50:31 INFO WorkerWatcher: Connecting to worker spark://Worker@172.19.0.4:39893
+25/12/12 18:50:31 INFO TransportClientFactory: Successfully created connection to /172.19.0.4:39893 after 3 ms (0 ms spent in bootstraps)
+25/12/12 18:50:31 INFO WorkerWatcher: Successfully connected to spark://Worker@172.19.0.4:39893
+25/12/12 18:50:31 INFO ResourceUtils: ==============================================================
+25/12/12 18:50:31 INFO ResourceUtils: No custom resources configured for spark.executor.
+25/12/12 18:50:31 INFO ResourceUtils: ==============================================================
+25/12/12 18:50:31 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+25/12/12 18:50:31 INFO Executor: Starting executor ID 1 on host 172.19.0.4
+25/12/12 18:50:31 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39021.
+25/12/12 18:50:31 INFO NettyBlockTransferService: Server created on 172.19.0.4:39021
+25/12/12 18:50:31 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/12/12 18:50:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 172.19.0.4, 39021, None)
+25/12/12 18:50:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, 172.19.0.4, 39021, None)
+25/12/12 18:50:31 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, 172.19.0.4, 39021, None)
+25/12/12 18:50:31 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/12/12 18:50:46 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+25/12/12 18:50:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/12/12 18:50:46 INFO TorrentBroadcast: Started reading broadcast variable 4 with 1 pieces (estimated total size 4.0 MiB)
+25/12/12 18:50:46 INFO TransportClientFactory: Successfully created connection to spark-master/172.19.0.2:35589 after 3 ms (0 ms spent in bootstraps)
+25/12/12 18:50:46 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+25/12/12 18:50:46 INFO Executor: Running task 0.0 in stage 3.0 (TID 2)
+25/12/12 18:50:46 INFO TorrentBroadcast: Started reading broadcast variable 7 with 1 pieces (estimated total size 4.0 MiB)
+25/12/12 18:50:46 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 73.1 KiB, free 434.2 MiB)
+25/12/12 18:50:46 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 119.8 KiB, free 434.2 MiB)
+25/12/12 18:50:46 INFO TorrentBroadcast: Reading broadcast variable 4 took 348 ms
+25/12/12 18:50:46 INFO TorrentBroadcast: Reading broadcast variable 7 took 134 ms
+25/12/12 18:50:46 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 335.1 KiB, free 433.7 MiB)
+25/12/12 18:50:46 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 204.8 KiB, free 433.7 MiB)
+25/12/12 18:50:47 INFO TorrentBroadcast: Started reading broadcast variable 6 with 1 pieces (estimated total size 4.0 MiB)
+25/12/12 18:50:47 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 433.7 MiB)
+25/12/12 18:50:47 INFO TorrentBroadcast: Reading broadcast variable 6 took 26 ms
+25/12/12 18:50:47 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 375.6 KiB, free 433.3 MiB)
+25/12/12 18:50:47 INFO StateStore: State Store maintenance task started
+25/12/12 18:50:47 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2524 bytes result sent to driver
+25/12/12 18:50:47 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@217ada71
+25/12/12 18:50:47 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),4149e154-23e4-49c8-8ee6-c9a3654567ed) is active
+25/12/12 18:50:47 WARN HDFSBackedStateStoreProvider: The state for version 79 doesn't exist in loadedMaps. Reading snapshot file and delta files if needed...Note that this is normal for the first batch of starting query.
+25/12/12 18:50:47 INFO HDFSBackedStateStoreProvider: Read snapshot file for version 70 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/70.snapshot
+25/12/12 18:50:47 INFO HDFSBackedStateStoreProvider: Read delta file for version 71 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/71.delta
+25/12/12 18:50:47 INFO HDFSBackedStateStoreProvider: Read delta file for version 72 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/72.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 73 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/73.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 74 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/74.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 75 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/75.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 76 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/76.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 77 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/77.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 78 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/78.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Read delta file for version 79 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] from file:/opt/spark-data/checkpoints/iss_statistics/state/0/0/79.delta
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Retrieved version 79 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for update
+25/12/12 18:50:48 INFO TorrentBroadcast: Started reading broadcast variable 5 with 1 pieces (estimated total size 4.0 MiB)
+25/12/12 18:50:48 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 433.2 MiB)
+25/12/12 18:50:48 INFO TorrentBroadcast: Reading broadcast variable 5 took 13 ms
+25/12/12 18:50:48 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 375.6 KiB, free 432.9 MiB)
+25/12/12 18:50:48 INFO StateStore: Retrieved reference to StateStoreCoordinator: org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef@217ada71
+25/12/12 18:50:48 INFO StateStore: Reported that the loaded instance StateStoreProviderId(StateStoreId(file:/opt/spark-data/checkpoints/iss_statistics/state,0,0,default),4149e154-23e4-49c8-8ee6-c9a3654567ed) is active
+25/12/12 18:50:48 INFO HDFSBackedStateStoreProvider: Retrieved version 79 of HDFSStateStoreProvider[id = (op=0,part=0),dir = file:/opt/spark-data/checkpoints/iss_statistics/state/0/0] for readonly
+25/12/12 18:50:48 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+25/12/12 18:50:48 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@spark-master:36865)
+25/12/12 18:50:48 INFO MapOutputTrackerWorker: Got the map output locations
+25/12/12 18:50:48 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/12/12 18:50:48 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 18 ms
+25/12/12 18:50:48 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+25/12/12 18:50:48 INFO MemoryStore: MemoryStore cleared
+25/12/12 18:50:48 INFO BlockManager: BlockManager stopped
+25/12/12 18:50:48 INFO ShutdownHookManager: Shutdown hook called
+25/12/12 18:50:48 ERROR CoarseGrainedExecutorBackend: RECEIVED SI
