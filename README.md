@@ -1,5 +1,9 @@
 # ISS Real-Time Analysis with Apache Spark
 
+<p align="center">
+  <img src="Img/ISS-img.jpg" alt="ISS image" height="200">
+</p>
+
 ## Project Overview
 
 Project of **Thibault GAREL** and **Alexandre GARREAU** !
